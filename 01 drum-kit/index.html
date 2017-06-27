@@ -72,7 +72,8 @@
         this.classList.remove('playing');
     }
 
-    const keys = document.querySelectorAll('.key');
+    const keys = document.querySelectorAll('.key');  // returns nodeList
+    console.log(keys);
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
     window.addEventListener('keydown', playSound);
